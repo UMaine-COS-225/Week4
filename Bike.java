@@ -1,12 +1,12 @@
 class Bike extends Vehicle {
     // This class inherits all the attributes from Vehicle.java
-    String horn;
+    String bell;
 
     public Bike() {
         super(); // Using super, we are calling the constructor of Vehicle class.
                  // Since we are not providing any parameters, we are calling its default
                  // constructor
-        this.horn = "Ring";
+        this.bell = "Ring";
     }
 
     // A settter methods allows to control the behavior of the attributes ensuring

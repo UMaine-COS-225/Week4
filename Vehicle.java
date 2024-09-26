@@ -2,13 +2,15 @@ class Vehicle { // Vehicle is a super class
 
     // Attributes of the Vehicle class that are also inherited by Bike.java and
     // Car.java
-    String color;
+    protected String color;
 
-    String make;
-    String model;
+    protected String make;
+    protected String model;
 
-    int topSpeed;
-    int numberOfWheels;
+    protected int topSpeed;
+    protected int numberOfWheels;
+
+    static protected int vehicleCount;
 
     // Parameterized constructor
     public Vehicle(String color, String make, String model, int topSpeed, int numberOfWheels) {
@@ -18,6 +20,7 @@ class Vehicle { // Vehicle is a super class
         this.model = model;
         this.topSpeed = topSpeed;
         this.numberOfWheels = numberOfWheels;
+        vehicleCount++;
     }
 
     // Default Constructor
@@ -27,6 +30,8 @@ class Vehicle { // Vehicle is a super class
         this.model = "F-150";
         this.topSpeed = 100;
         this.numberOfWheels = 4;
+        vehicleCount++;
+
     }
 
     // This method is also inherited by Car.java and Bicycle.java since they both
@@ -35,6 +40,10 @@ class Vehicle { // Vehicle is a super class
     public void printVehicle() {
         System.out.println("This is a " + make + " " + model);
 
+    }
+
+    public static void printNumberOfVehiclesManufactured() {
+        System.out.println("We have manufactured " + vehicleCount + " many vehicles.");
     }
 
     // public void printColor() {

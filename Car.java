@@ -1,6 +1,6 @@
 class Car extends Vehicle { // Sub class of Vehicle
 
-    String horn;
+    private String horn;
 
     // Parameterized Constructor
     public Car(String color, String horn, String make, String model, int topSpeed, int numberOfWheels) {
@@ -18,13 +18,22 @@ class Car extends Vehicle { // Sub class of Vehicle
     }
 
     // Constructor with two parameters
-    public Car(String color, String horn) {
-        // this.color = color;
-        this.horn = horn;
-        this.make = "Ford";
-        this.model = "F-150";
-        this.topSpeed = 100;
-        this.numberOfWheels = 4;
+    // public Car(String color, String horn) {
+    // // this.color = color;
+    // this.horn = horn;
+    // this.make = "Ford";
+    // this.model = "F-150";
+    // this.topSpeed = 100;
+    // this.numberOfWheels = 4;
+    // }
+
+    public void printDetails() {
+        System.out.println(make);
+        System.out.println(model);
+        System.out.println(color);
+        System.out.println(horn);
+        System.out.println(topSpeed);
+        System.out.println(numberOfWheels);
     }
 
     // Method
@@ -39,6 +48,17 @@ class Car extends Vehicle { // Sub class of Vehicle
         } else {
             System.out.println("This is too much speed");
         }
+    }
+
+    // Getter for horn
+    public String getHorn() {
+        return horn;
+        // return this.horn;
+    }
+
+    // Setter for horn
+    public void setHorn(String horn) {
+        this.horn = horn;
     }
 
 }

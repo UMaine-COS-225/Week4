@@ -28,24 +28,37 @@ class OOPDemo {
 
         // To verify that the attributes are instantiated with the parameters we
         // provided in the above line, we print them.
-        System.out.println(myFirstCar.color);
-        System.out.println(myFirstCar.horn);
-        System.out.println(myFirstCar.make);
-        System.out.println(myFirstCar.model);
-        System.out.println(myFirstCar.topSpeed);
-        System.out.println(myFirstCar.numberOfWheels);
+        // System.out.println(myFirstCar.color);
+        // System.out.println(myFirstCar.horn);
+        // System.out.println(myFirstCar.make);
+        // System.out.println(myFirstCar.model);
+        // System.out.println(myFirstCar.topSpeed);
+        // System.out.println(myFirstCar.numberOfWheels);
+        System.out.println("--------------------");
+        myFirstCar.printDetails();
 
         // We can also use the default constructor to create a Car object
         Car mySecondCar = new Car();
 
+        System.out.println("The first car" + myFirstCar.getHorn());
+        myFirstCar.setHorn("Quack");
+        System.out.println("The first car" + myFirstCar.getHorn());
+
         // Let's check what are the attributes of this class when created using the
         // default constructor
-        System.out.println(mySecondCar.color);
-        System.out.println(mySecondCar.horn);
-        System.out.println(mySecondCar.make);
-        System.out.println(mySecondCar.model);
-        System.out.println(mySecondCar.topSpeed);
-        System.out.println(mySecondCar.numberOfWheels);
+        // System.out.println(mySecondCar.color);
+        // System.out.println(mySecondCar.horn);
+        // System.out.println(mySecondCar.make);
+        // System.out.println(mySecondCar.model);
+        // System.out.println(mySecondCar.topSpeed);
+        // System.out.println(mySecondCar.numberOfWheels);
+
+        mySecondCar.printDetails();
+
+        System.out.println("The second car " + mySecondCar.getHorn());
+        mySecondCar.setHorn("Meeps");
+        System.out.println("The second car " + mySecondCar.getHorn());
+        System.out.println("--------------------");
 
         // Uncomment the following lines to check if we were able to create a new car or
         // not
@@ -60,15 +73,15 @@ class OOPDemo {
 
         // The method printVehicle only exists in Vehicle.java but because Car.java
         // extends from Vehicle.java, Car objects also have those methods available.
-        mySecondCar.printVehicle();
-        myFirstCar.printVehicle();
+        // mySecondCar.printVehicle();
+        // myFirstCar.printVehicle();
 
         Vehicle myNewVehicle = new Vehicle("Brown", "Volvo", "BarFooBar", 150, 8);
-        System.out.println(myNewVehicle.color);
-        System.out.println(myNewVehicle.make);
-        System.out.println(myNewVehicle.model);
-        System.out.println(myNewVehicle.topSpeed);
-        System.out.println(myNewVehicle.numberOfWheels);
+        // System.out.println(myNewVehicle.color);
+        // System.out.println(myNewVehicle.make);
+        // System.out.println(myNewVehicle.model);
+        // System.out.println(myNewVehicle.topSpeed);
+        // System.out.println(myNewVehicle.numberOfWheels);
 
         Car fifthCar = new Car();
         fifthCar.printColor();
@@ -78,11 +91,15 @@ class OOPDemo {
         Bike myNewBike = new Bike();
         myNewBike.printVehicle();
 
-        System.out.println(myNewBike.horn);
-        System.out.println(myNewBike.make);
-        System.out.println(myNewBike.model);
-        System.out.println(myNewBike.topSpeed);
-        System.out.println(myNewBike.numberOfWheels);
+        System.out.println("The vehicle count is: " + Bike.vehicleCount);
+        // System.out.println("The bell is " + Bike.bell);
+
+        Vehicle.printNumberOfVehiclesManufactured();
+        // System.out.println(myNewBike.horn);
+        // System.out.println(myNewBike.make);
+        // System.out.println(myNewBike.model);
+        // System.out.println(myNewBike.topSpeed);
+        // System.out.println(myNewBike.numberOfWheels);
 
     }
 
